@@ -1,5 +1,6 @@
 // Load Form
 $('.modal-title').text('Novo usuário');
+$('.phone_with_ddd').mask('(99) 99999-9999');
 
 if ( data ) {
 	$('.modal-title').text('Usuário #'+data.idusuario);
@@ -59,7 +60,7 @@ selectPermissao.selectpicker();
 if ( data.idusuario ) {
 	if (data.ativado=='S') $('#ativado').prop('checked',true);
 	// oculta o botao excluir
-	$('#btn-excluir').hide();
+	$('#btn-excluir').show();
 } else {
 	// oculta o botao excluir e renova senha
 	$('#btn-excluir').hide();
@@ -88,7 +89,7 @@ $('form').submit(function(){
 			} else {
 				$('input[name="idusuario"]').val(result.idusuario);
 				$('#btn-renovar-senha').show();
-				//$('#btn-excluir').show();
+				$('#btn-excluir').show();
 				alert('Usuário ID '+result.idusuario+' salvo!');
 				datatable.ajax.reload(null, false);
 			}

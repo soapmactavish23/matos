@@ -9,7 +9,7 @@ body {
 	width: 36px;
 	height: 36px;
 	border-radius: 18px;
-	border: 1px solid #ffffff;
+	/* border: 1px solid #ffffff; */
 }
 
 /* The Container (background) */
@@ -48,7 +48,7 @@ body {
 
 .modal-header, .close {
     color: white;
-	background-color: #0072B6;
+	background-color: #292b2c;
 	border-top-left-radius: 0.3rem;
 	border-top-right-radius: 0.3rem;
 }

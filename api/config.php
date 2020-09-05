@@ -13,7 +13,7 @@ ini_set("max_input_time", "600");
 define("DB_HOST", "localhost");
 define("DB_USER", "admin");
 define("DB_PASSWORD", "senh@d0@dmin");
-define("DB_DB", "disquedenuncia");
+define("DB_DB", "matos");
 define("CHARSET", "utf8");
 
 # define a chave privada para Json Web Token - JWT

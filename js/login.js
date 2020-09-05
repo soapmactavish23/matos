@@ -12,7 +12,7 @@ $('form').submit(function() {
 			if (result) {
 				if (result.token) {
 					sessionStorage.setItem('token', result.token);
-					location.replace( pathname );
+					window.location.reload();
 				} else {
 					console.log(result);
 				}

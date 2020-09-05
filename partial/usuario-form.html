@@ -13,21 +13,9 @@
 			<label for='email'>E-mail</label>
 			<input class='form-control' type='email' id='email' name='email' placeholder='Escreva o e-mail do usuário' required>
 		</div>
-		<div class='row'>
-			<div class='col-sm-6 from-group'>
-				<label for='contato'>Contato (ex. 9133114455)</label>
-				<input class='form-control' type='text' pattern='[0-9]+' maxlength='11' id='contato' name='contato' placeholder='Somente números'>
-			</div>
-			<div class='col-sm-6'>
-				<label for='whatsapp'>Whatsapp (ex. 91988887777)</label>
-				<input class='form-control' type='text' pattern='[0-9]+' maxlength='11' id='whatsapp' name='whatsapp' placeholder='Somente números'>
-			</div>			
-		</div>
-		<div class="from-group">
-			<label>Orgão</label>
-			<div id='div-setor'>
-				<select class='form-control selectpicker' id='idorgao' name='idorgao' data-live-search='true' required></select>
-			</div>
+		<div class="form-group">
+			<label for='contato'>Contato (ex. 9133114455)</label>
+			<input class='form-control phone_with_ddd' type='text' id='contato' name='contato' placeholder='Somente números'>
 		</div>
 		<div class='form-group'>
 			<label for='permissao'>Permissões</label>
@@ -45,4 +33,4 @@
 	</div>
 </form>
 
-<script src='js/usuario-form.js'></script>
+<script src='../js/usuario-form.js'></script>

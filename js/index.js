@@ -1,5 +1,4 @@
-var pathname = '/181/';
-var url = location.origin + pathname + 'api/';
+var url = location.origin + '/api/';
 
 if (location.search) {
 
@@ -31,7 +30,7 @@ if (location.search) {
                                 liSubMenu += '<li id="' + subitem.id + '"><a class="dropdown-item" href="#' + subitem.id + '">' + subitem.label + '</a></li>';
                             }
                         });
-                        if (liSubMenu) liMenu += '<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">' + item.label + '</a><ul class="dropdown-menu">' + liSubMenu + '</ul></li>';
+                        if (liSubMenu) liMenu += '<li class="nav-item dropdown hvr-grow"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">' + item.label + '</a><ul class="dropdown-menu">' + liSubMenu + '</ul></li>';
                     } else {
                         if (permissions.indexOf(item.id) > -1) {
                             liMenu += '<li class="nav-item" id="' + item.id + '"><a class="nav-link" href="#' + item.id + '">' + item.label + '</a></li>';
@@ -41,7 +40,7 @@ if (location.search) {
 
                 $('title').html(menu.title);
                 $('#menu').html(liMenu);
-                $('#user').html('<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Olá ' + user.nome + '</a><ul class="dropdown-menu"><li id="mudasenha"><a class="dropdown-item" href="#mudasenha">Mudar senha</a></li><li id="out"><a class="dropdown-item" href="#out">Sair</a></li></ul></li>');
+                $('#user').html('<li class="nav-item dropdown hvr-grow"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Olá ' + user.nome + '</a><ul class="dropdown-menu"><li id="mudasenha"><a class="dropdown-item" href="#mudasenha">Mudar senha</a></li><li id="out"><a class="dropdown-item" href="#out">Sair</a></li></ul></li>');
 
                 return menu;
             }
@@ -51,7 +50,7 @@ if (location.search) {
         var userCaseId;
         var out = function() {
             sessionStorage.removeItem('token');
-            location.replace(pathname);
+            window.location.reload();
         }
 
         $('.navbar-nav').on('click', 'li', function() {

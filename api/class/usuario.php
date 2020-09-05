@@ -3,7 +3,7 @@
 class usuario extends database {
 	
 	public function autenticar ( $login, $password ) {
-		$sql = "SELECT idusuario, nome, permissao, idorgao, if(md5(email)=senha,true,false) mudasenha
+		$sql = "SELECT idusuario, nome, permissao, if(md5(email)=senha,true,false) mudasenha
 		FROM usuario
 		WHERE binary email='" . addslashes($login) . "' and binary senha='" . md5( addslashes($password) ) . "' and ativado='S'
 		LIMIT 1";
@@ -36,9 +36,8 @@ class usuario extends database {
 	}
 	
 	public function obterTodos() {
-		$sql = "SELECT idusuario, nome, orgao, email, contato, whatsapp, u.idorgao, permissao, dt_update, ativado 
-		FROM usuario u
-		INNER JOIN orgao o on u.idorgao=o.idorgao";
+		$sql = "SELECT *
+		FROM usuario";
 	
 		if ( $rs = parent::fetch_all($sql) ) {
 			foreach ( $rs as $row ) {
@@ -52,34 +51,12 @@ class usuario extends database {
 		}
 	}
 
-	public function obterTodosComEncaminhamento(){
-		$sql = "SELECT idusuario, nome FROM usuario WHERE permissao like '%encaminhamento-denuncia%'";
-		if ( $rs = parent::fetch_all($sql) ) {
-			foreach ( $rs as $row ) {
-				$col = array();
-				foreach ( $row as $k=>$v ) {
-					$col[$k] = stripslashes($v);
-				}
-				$rows[] = $col;
-			}
-			return array( 'data' => $rows );
-		}
-	}
-
 	public function salvar() {
-		if ( @ $_REQUEST['orgao'] ) {
-			require_once ('class/orgao.php');
-			$_orgao = new orgao();
-			$orgao = $_orgao->salvar();
-			$_REQUEST['idorgao'] = $orgao['idorgao'];
-		}
 		
 		$this->idusuario = @ $_REQUEST['idusuario'];
 		$this->nome = addslashes(@ $_REQUEST['nome']);
 		$this->email = (@ $_REQUEST['email']);
 		$this->contato = (@ $_REQUEST['contato']);
-		$this->whatsapp = (@ $_REQUEST['whatsapp']);
-		$this->idorgao = (@ $_REQUEST['idorgao']);
 		$this->permissao = implode(',', @ $_REQUEST['permissao']);
 
 		if ( @ $_REQUEST['ativado'] ) $this->ativado = 'S';
