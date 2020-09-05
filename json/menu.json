@@ -1,0 +1,27 @@
+{
+    "title": "Disque Denúncia",
+    "items": [
+        {
+            "label": "Atendimento",
+            "subitems": [
+                { "id": "atendimento-inserir", "label": "Inserir" },
+                { "id": "atendimento-distribuir", "label": "Distribuir" },
+                { "id": "atendimento-atender", "label": "Atender" },
+                { "id": "atendimento-consultar", "label": "Consultar" }
+            ]
+        },
+        {
+            "label": "Produtos",
+            "subitems": [
+                { "id": "produto-cadastrar", "label": "Cadastrar" },
+                { "id": "produto-consultar", "label": "Consultar" }
+            ]
+        },
+        {
+            "label": "Administração",
+            "subitems": [
+                { "id": "usuario", "label": "Cadastrar usuários" }
+            ]
+        }
+    ]
+}

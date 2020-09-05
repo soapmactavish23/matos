@@ -1,0 +1,101 @@
+<script src="./lib/chart/Chart.min.js"></script>
+<link rel="stylesheet" type="text/css" href="./lib/chart/Chart.min.css">
+
+<div class='panel'>
+	<form class='form-inline'>
+		<label>Período: </label>
+		<select class='form-control' id='periodo'>
+			<option value=0>última hora</option>
+			<option value=1>últimas 24 horas</option>
+			<option value=7>últimos 7 dias</option>
+			<option value=30>últimos 30 dias</option>
+			<option value=365>últimos 365 dias</option>
+		</select>
+	</form>
+</div>
+
+<div id='situacao-denuncia' class='panel'>
+	<div class='h6 text-center'>Situação de <span class='h4' id='atualizadas'></span> denúncias atualizadas <span id='span-periodo'></span></div>
+	<div class="row">
+		<div class='col-lg-2 col-md-4 col-sm-6 mb-1'>
+			<div class='card shadow bg-danger text-white text-center'>
+				<h2 class='card-title' id='registradas'>0</h2>
+				<div class='card-text'>Registradas<br>(<span id='per-registradas'></span>%)</div>
+			</div> 
+		</div>
+		<div class='col-lg-2 col-md-4 col-sm-6 mb-1'>
+			<div class='card shadow bg-warning text-white text-center'>
+				<h2 class='card-title' id='avaliadas'>0</h2>
+				<div class='card-text'>Avaliadas<br>(<span id='per-avaliadas'></span>%)</div>
+			</div> 
+		</div>
+		<div class='col-lg-2 col-md-4 col-sm-6 mb-1'>
+			<div class='card shadow bg-primary text-white text-center'>
+				<h2 class='card-title' id='encaminhadas'>0</h2>
+				<div class='card-text'>Encaminhadas<br>(<span id='per-encaminhadas'></span>%)</div>
+			</div> 
+		</div>
+		<div class='col-lg-2 col-md-4 col-sm-6 mb-1'>
+			<div class='card shadow bg-info text-white text-center'>
+				<h2 class='card-title' id='averiguando'>0</h2>
+				<div class='card-text'>Averiguando<br>(<span id='per-averiguando'></span>%)</div>
+			</div> 	
+		</div>
+		<div class='col-lg-2 col-md-4 col-sm-6 mb-1'>
+			<div class='card shadow bg-success text-white text-center'>
+				<h2 class='card-title' id='finalizadas'>0</h2>
+				<div class='card-text'>Finalizada<br>(<span id='per-finalizadas'></span>%)</div>
+			</div> 	
+		</div>
+		<div class='col-lg-2 col-md-4 col-sm-6 mb-1'>
+			<div class='card shadow bg-dark text-white text-center'>
+				<h2 class='card-title' id='arquivadas'>0</h2>
+				<div class='card-text'>Arquivadas<br>(<span id='per-arquivadas'></span>%)</div>
+			</div> 	
+		</div>
+	</div>
+</div>
+
+<div class='row'>
+	<div class='col-lg-6 col-md-12'>
+		<canvas id='chart-finalizadas-crescente-pm' class='panel shadow'></canvas>
+	</div>
+
+	<div class='col-lg-6 col-md-12'>
+		<canvas id='chart-finalizadas-crescente-pc' class='panel shadow'></canvas>
+	</div>
+</div>
+
+
+<div class='row'>
+	<div class='col-lg-6 col-md-12'>
+		<canvas id='chart-registradas' class='panel shadow'></canvas>
+	</div>
+
+	<div class='col-lg-6 col-md-12'>
+		<canvas id='chart-origem-registrada' class='panel shadow'></canvas>
+	</div>
+</div>
+
+<div class='row'>
+	<div class='col-lg-6 col-md-12'>
+		<canvas id='chart-natureza-registrada' class='panel shadow'></canvas>
+	</div>
+
+	<div class='col-lg-6 col-md-12'>
+		<canvas id='chart-cidade-registrada' class='panel shadow'></canvas>
+	</div>
+</div> 
+
+<div class='row'>
+	<div class='col-lg-6 col-md-12'>
+		<canvas id='chart-finalizadas-pm' class='panel shadow'></canvas>
+	</div>
+
+	<div class='col-lg-6 col-md-12'>
+		<canvas id='chart-finalizadas-pc' class='panel shadow'></canvas>
+	</div>
+</div>
+
+
+<script src='js/dashboard.js'></script>

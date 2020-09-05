@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+    <meta name="description" content="Matos MotoCenter">
+    <meta name="author" content="Henrick de Sousa Nogueira">
+
+    <title>Matos MotoCenter</title>
+
+    <!-- Load Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico">
+
+    <!-- Load Leaflet from CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+
+    <!-- Load Esri Leaflet from CDN -->
+    <script src="https://unpkg.com/esri-leaflet@2.2.3/dist/esri-leaflet.js"></script>
+
+    <!-- Load Esri Leaflet Geocoder from CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/esri-leaflet-geocoder@2.2.13/dist/esri-leaflet-geocoder.css">
+    <script src="https://unpkg.com/esri-leaflet-geocoder@2.2.13/dist/esri-leaflet-geocoder.js"></script>
+
+    <!-- Load JQuery Lib -->
+    <script src="./lib/jquery/jquery-3.3.1.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="./lib/jquery/jquery-3.3.1.slim.min.js"><\/script>')
+    </script>
+
+    <!-- Load Popper Lib -->
+    <script src="./lib/popper/popper.min.js"></script>
+
+    <!-- Load Bootstrap Lib -->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <script type="text/javascript" src="./lib/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Load Bootstrap-select Lib -->
+    <link rel="stylesheet" href="./lib/bootstrap-select/css/bootstrap-select.min.css">
+    <script src="./lib/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="./lib/bootstrap-select/js/i18n/defaults-pt_BR.min.js"></script>
+
+    <!-- Load DataTables Lib -->
+    <link rel="stylesheet" type="text/css" href="lib/datatables/datatables.min.css">
+    <script src="./lib/datatables/datatables.min.js"></script>
+    <script src="./lib/datatables/datetime.js"></script>
+
+    <!-- Load ChartJs from CDN -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
+
+    <!-- Load styles for this template -->
+    <link rel="stylesheet" href="./css/index.css">
+
+    <!-- Aos Animation -->
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+	<!-- Hover -->
+	<link rel="stylesheet" type="text/css" href="lib/Hover-master/css/hover.css">
+</head>
+
+<body>
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top" style="background-color: #0072B6;">
+        <a class="navbar-brand" href="index.html"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars"
+            aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation"><span
+                class="navbar-toggler-icon"></span></button>
+
+        <div class="collapse navbar-collapse" id="navbars">
+            <ul id="menu" class="navbar-nav mr-auto"></ul>
+            <ul id="user" class="navbar-nav"></ul>
+        </div>
+    </nav>
+
+    <!-- Main -->
+    <main role="main" class="container"></main>
+
+    <!-- Footer -->
+    <div class='footer text-center bg-dark text-light'>Gestão Matos MotoCenter - Copyright ® - Versão 1.0.0
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal fade" data-backdrop="static" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content"></div>
+        </div>
+    </div>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="./js/index.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
