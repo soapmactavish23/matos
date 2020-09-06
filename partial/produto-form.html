@@ -1,0 +1,72 @@
+<div class="modal-header">
+	<h4 class='modal-title'></h4>
+	<button type="button" class="close" data-dismiss="modal" aria-label="Fechar">&times;</button>
+</div>
+<div class="modal-body">
+	<nav>
+		<div class="nav nav-tabs" id="nav-tab" role="tablist">
+			<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+				aria-controls="nav-home" aria-selected="true">Formulário</a>
+			<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+				aria-controls="nav-profile" aria-selected="false">Midia</a>
+		</div>
+	</nav>
+	<div class="tab-content" id="nav-tabContent">
+		<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+			<form role="form">
+				<input type='hidden' name='idproduto'>
+				<div class='form-group'>
+					<label for='descricao'>Descricao</label>
+					<input class='form-control' type='text' id='descricao' name='descricao'
+						placeholder='Digite a Descrição do Produto' required>
+				</div>
+				<div class='form-group'>
+					<label for='estoque'>Estoque</label>
+					<input class='form-control' type='number' id='estoque' name='estoque'
+						placeholder='Digite a quantidade em estoque' required>
+				</div>
+				<div class="form-group">
+					<label for='unidade_medida'>Selecione a Unidade de Medida</label>
+					<div id='div-unidade_medida'>
+						<select class='form-control selectpicker' id='unidade_medida' name='unidade_medida'
+							data-live-search='true' required></select>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button class='btn btn-success' type='submit'>Salvar</button>
+					<button class='btn btn-danger' type='button' id='btn-excluir'>Excluir</button>
+					<button class='btn btn-primary' type='button' id='btn-renovar-senha'>Renovar senha</button>
+				</div>
+			</form>
+		</div>
+		<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+			<div class="container">
+				<div id="carouselMidia" class="carousel slide" data-ride="carousel">
+					<div class="carousel-inner"></div>
+					<a class="carousel-control-prev" href="#carouselMidia" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Anterior</span>
+					</a>
+					<a class="carousel-control-next" href="#carouselMidia" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Proximo</span>
+					</a>
+				</div>
+				<form id='form-midia form-group' enctype='multipart/form-data' style='padding-top: 10px;'>
+					<input type='file' class='form-control-file' name='file[]' max-size=16000000 multiple>
+					<input type=hidden name='iddenuncia'>
+					<input type=hidden name='classe'>
+					<input type=hidden name='metodo'>
+					<input type=hidden name='token'>
+
+					<div class='row-btn'>
+						<button type='submit' class='btn btn-success'>Salvar</button>
+					</div>
+				</form>
+				<script src='js/midia-denuncia-form.js'></script>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src='../js/produto-form.js'></script>

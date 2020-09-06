@@ -13,7 +13,7 @@
         {
             "label": "Produtos",
             "subitems": [
-                { "id": "produto-cadastrar", "label": "Cadastrar" },
+                { "id": "produto", "label": "Cadastrar" },
                 { "id": "produto-consultar", "label": "Consultar" }
             ]
         },
